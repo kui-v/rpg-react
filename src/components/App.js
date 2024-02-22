@@ -148,6 +148,10 @@ const inputs = [
 function App() {
   return (
     <div className="App">
+      <div className="Search">
+        <p>Search:</p>
+        <input id="searchBox" type='text'></input>
+      </div>
       <div className="Cards">
         {
           inputs.map((card) => {

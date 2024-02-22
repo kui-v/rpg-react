@@ -8,10 +8,18 @@
   justify-content: center;
 }
 
-.Card-Image {
+.Card-image {
   max-width: 140px;
   max-height: 140px;
   border: 1px solid grey;
+}
+
+.Card-name {
+  text-decoration: underline;
+}
+
+.Card-type {
+  font-style: italic;
 }
 
 p {
