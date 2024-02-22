@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
       <footer className="Footer">
-        <p>Test</p>
+        <p>lentils.moe</p>
       </footer>
     </>
   )
