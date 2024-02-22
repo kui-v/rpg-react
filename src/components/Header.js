@@ -7,8 +7,8 @@ function Header() {
       <header className="Header">
         <img src={logo} className="Header-logo" alt="logo" />
         <div className="Header-options">
-          <p>Create</p>
-          <p>View</p>
+          <p>Pull</p>
+          <p>Cards</p>
           <p>Play</p>
         </div>
       </header>

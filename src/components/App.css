@@ -1,3 +1,11 @@
 .App {
   min-height: 86vh;
 }
+
+.Cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 30px;
+} 
