@@ -1,161 +1,26 @@
 import './App.css';
 import Card from './Card';
-
-const inputs = [
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"},
-  {"name": "test1", "type": "test"}, 
-  {"name": "test31", "type":"defaultType"},
-  {"name": "test32", "type": "testing"},
-  {"name": "test33", "type": "testing"}
-];
-
+import { useState } from 'react';
+import { inputs } from './Inputs' 
 
 function App() {
+  const [searchResults, setSearchResults] = useState(inputs);
+  const handleInputChange = (e) => {
+    const searchTerm = e.target.value;
+    const results = inputs.filter((card) => card.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    setSearchResults(results);
+  }
+
   return (
     <div className="App">
       <div className="Search">
         <p>Search:</p>
-        <input id="searchBox" type='text'></input>
+        <input onChange={handleInputChange} placeholder='Type to search' type='text'></input>
       </div>
       <div className="Cards">
         {
-          inputs.map((card) => {
-            return(<Card key={card.name} name={card.name} type={card.type} />);
+          searchResults.map((card) => {
+            return(<Card key={Math.random()} name={card.name} type={card.type} />);
           })
         }
       </div>
