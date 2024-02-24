@@ -16,6 +16,8 @@
 
 .Card-title {
   text-decoration: underline;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .Card-type {
