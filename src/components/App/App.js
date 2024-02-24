@@ -10,7 +10,7 @@ function App() {
       method: "GET",
       redirect: "follow",
     }
-    fetch("http://localhost:8000/test", requestOptions)
+    fetch("http://localhost:8000/anime", requestOptions)
       .then((response) => response.json())
       .then((result) => setInputs(result))
       .then((error) => console.log("error", error));
@@ -37,7 +37,7 @@ function App() {
       <div className="Cards">
         {
           searchResults.map((card) => {
-            return(<Card key={Math.random()} name={card.name} type={card.type} />);
+            return(<Card key={Math.random()} title={card.title} type={card.type} />);
           })
         }
       </div>
