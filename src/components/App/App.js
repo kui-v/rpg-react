@@ -2,6 +2,13 @@ import './App.css';
 import Card from '../Card/Card';
 import { useEffect, useState } from 'react';
 import { inputs } from './Inputs';
+import axios from 'axios';
+
+const apiCall = () => {
+  axios.get('http://localhost:8080').then((data) => {
+    console.log(data)
+  })
+}
 
 function App() {
   const [inputs, setInputs] = useState([]);
@@ -34,6 +41,9 @@ function App() {
         <p>Search:</p>
         <input onChange={handleInputChange} placeholder='Type to search' type='text'></input>
       </div>
+      <button onClick={apiCall}>
+        Make API call
+      </button>
       <div className="Cards">
         {
           searchResults.map((card) => {
