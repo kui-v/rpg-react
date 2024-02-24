@@ -8,9 +8,13 @@
   justify-content: center;
 }
 
+.Card.tv {
+  background-color: gold
+}
+
 .Card-image {
-  max-width: 140px;
-  max-height: 140px;
+  max-width: 130px;
+  max-height: 130px;
   border: 1px solid grey;
 }
 

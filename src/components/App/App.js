@@ -24,7 +24,7 @@ function App() {
 
   const handleInputChange = (e) => {
     const searchTerm = e.target.value;
-    const results = inputs.filter((card) => card.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    const results = inputs.filter((card) => card.title.toLowerCase().includes(searchTerm.toLowerCase()));
     setSearchResults(results);
   }
 
