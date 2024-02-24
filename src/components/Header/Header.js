@@ -1,4 +1,4 @@
-import logo from '../lentils.svg';
+import logo from '../../lentils.svg';
 import './Header.css';
 
 function Header() {
