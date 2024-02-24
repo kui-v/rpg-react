@@ -37,7 +37,7 @@ function App() {
       <div className="Cards">
         {
           searchResults.map((card) => {
-            return(<Card key={Math.random()} title={card.title} type={card.type} />);
+            return(<Card key={Math.random()} title={card.title} type={card.type} score={card.score}/>);
           })
         }
       </div>
